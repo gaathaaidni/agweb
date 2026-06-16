@@ -1,122 +1,87 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
-import { Target, Users, Search, Briefcase, Globe, Mail, Phone } from 'lucide-react';
+import { CheckCircle2, Rocket, Globe, Package, Zap } from 'lucide-react';
+import Link from 'next/link';
 import BreadcrumbJsonLd from '../../BreadcrumbJsonLd';
 
-export default function AboutPage() {
-  const competencies = [
-    { title: "Market Entry Strategy", desc: "Go-to-market design, competition analysis, feasibility studies, and expansion planning.", icon: <Target className="w-6 h-6 text-blue-600" /> },
-    { title: "Business Development & Partner Search", desc: "Identifying distributors, agents, institutional partners, and B2B opportunities.", icon: <Users className="w-6 h-6 text-blue-600" /> },
-    { title: "Market Research & Insights", desc: "Custom sector reports, pricing studies, demand forecasting, and competitive benchmarking.", icon: <Search className="w-6 h-6 text-blue-600" /> },
-    { title: "Investor & Financial Advisory", desc: "Investor introductions, project evaluation, and cross-border business facilitation.", icon: <Briefcase className="w-6 h-6 text-blue-600" /> },
-    { title: "International Project Management", desc: "On-ground coordination across India, Canada, Europe, and Asia.", icon: <Globe className="w-6 h-6 text-blue-600" /> },
-  ];
+export const metadata: Metadata = {
+  title: "Gaatha Suite | All-in-One Business Management Platform",
+  description: "Streamline your MSME operations with Gaatha Suite. Integrated tools for accounting, CRM, inventory, and payroll designed for global business growth.",
+  alternates: {
+    canonical: "/gaatha-suite",
+  },
+};
 
-  const testimonials = [
-    { name: "Blessmon Samuel", text: "Clear strategy and end-to-end assistance. Highly recommended for global expansion.", role: "Client", avatar: "/images/testimonials/male-3.jpg" },
-    { name: "Jenna Smith", text: "Professional team, deep market insights, and excellent support throughout our expansion process.", role: "Client", avatar: "/images/testimonials/female-3.jpg" },
-    { name: "Stevens", text: "Strong network and reliable advisory for cross-border projects.", role: "Client", avatar: "/images/testimonials/male-1.jpg" },
-  ];
+const apps = [
+  { name: "Nexora Books", desc: "Accounting, invoicing & financial reports" },
+  { name: "Nexora CRM", desc: "Leads, deals & sales pipeline" },
+  { name: "Nexora Inventory", desc: "Stock & warehouse management" },
+  { name: "Nexora POS", desc: "Retail billing & point of sale" },
+  { name: "Nexora HR", desc: "Employee & role management" },
+  { name: "Nexora Payroll", desc: "Salary automation & payslips" },
+  { name: "Nexora Pay", desc: "Payments, invoices & transactions" },
+  { name: "Nexora Desk", desc: "Customer support & ticketing" },
+  { name: "Nexora Projects", desc: "Tasks & project tracking" },
+];
 
+export default function GaathaSuitePage() {
   return (
-    <main className="flex flex-col">
+    <main className="flex flex-col min-h-screen bg-white">
       <BreadcrumbJsonLd 
         items={[
           { name: 'Home', item: '/' },
-          { name: 'About Us', item: '/about' }
+          { name: 'Gaatha Suite', item: '/gaatha-suite' }
         ]} 
       />
-      
-      {/* Hero Section */}
-      <section className="bg-slate-900 py-20 text-white text-center">
-        <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">About Aidni Global</h1>
-          <p className="text-xl text-blue-100">Expanding Businesses Across Borders With Strategic Insight</p>
-        </div>
-      </section>
 
-      {/* Mission & Overview */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <p className="text-lg text-gray-700 leading-relaxed">
-                Aidni Global LLP is an international business development and consulting firm helping companies expand into India, South America, Europe, and the UAE. We specialize in market entry, research, distribution planning, investor facilitation, and cross-border business advisory.
-              </p>
-              <p className="text-lg text-gray-700 leading-relaxed font-medium border-l-4 border-blue-600 pl-4">
-                Our mission is to create sustainable global pathways for SMEs, exporters, startups, technology firms, and investment ventures through clear strategy and hands-on execution.
-              </p>
-              <p className="text-lg text-gray-700">
-                We blend global networks with local expertise, enabling our clients to enter new markets with confidence and clarity.
-              </p>
-              <div className="pt-4">
-                <a href="mailto:office@aidniglobal.in" className="inline-flex items-center gap-2 text-blue-700 font-bold hover:underline">
-                  <Mail className="w-5 h-5" /> Let&apos;s talk with us: office@aidniglobal.in
-                </a>
-              </div>
-            </div>
-            <div className="relative bg-gray-100 rounded-2xl h-80 overflow-hidden shadow-xl border border-gray-100">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-b from-blue-50 to-white py-24 border-b border-gray-100">
+        <div className="max-w-5xl mx-auto px-4 text-center">
+          <div className="flex justify-center mb-8">
+            <div className="relative w-24 h-24">
               <Image 
-                src="/images/about/team-photo.jpg" 
-                alt="Aidni Global Team" 
-                fill 
-                className="object-cover"
+                src="/images/gaatha-suite/cropped-cropped-img-20250519-103858-748.webp" 
+                alt="Gaatha Suite Logo"
+                fill
+                className="rounded-2xl shadow-sm object-contain"
+                priority
               />
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Philosophy */}
-      <section className="py-20 bg-slate-50 text-center">
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8">Company Philosophy</h2>
-          <h3 className="text-2xl text-blue-800 font-semibold mb-6">We Create Growth, Not Just Strategies</h3>
-          <p className="text-lg text-gray-600 leading-relaxed mb-8">
-            At Aidni Global, we don’t deliver generic consulting reports — we build actionable plans. From industry analysis to distributor onboarding, investor connections, and local representation, we focus on real outcomes that help your business scale globally.
-          </p>
-          <p className="text-gray-500 italic">
-            Our work spans multiple industries including technology, manufacturing, food & retail, logistics, services, and export-driven businesses.
-          </p>
-        </div>
-      </section>
-
-      {/* Core Expertise */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-16">Our Core Competencies</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {competencies.map((item, index) => (
-              <div key={index} className="p-8 border border-gray-100 rounded-xl hover:shadow-lg transition-shadow">
-                <div className="mb-4">{item.icon}</div>
-                <h4 className="text-xl font-bold mb-3">{item.title}</h4>
-                <p className="text-gray-600 leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
+          <h1 className="text-5xl font-extrabold text-blue-900 mb-6 tracking-tight">Gaatha Suite</h1>
+          <p className="text-2xl text-gray-600 mb-10">One platform. Every business tool you need.</p>
+          <div className="flex flex-col items-center gap-4">
+            <a href="https://gaathasuite.gaatha.tech" target="_blank" className="bg-blue-600 text-white px-10 py-4 rounded-full text-lg font-bold shadow-xl hover:bg-blue-700 transition-all flex items-center gap-2">
+              <Rocket className="w-5 h-5" /> Access Nexora Suite (Beta)
+            </a>
+            <p className="text-sm text-gray-400">Built by Aidni Global LLP • Serving MSMEs across globe</p>
           </div>
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-20 bg-blue-900 text-white">
+      {/* Product Overview */}
+      <section className="py-24 max-w-4xl mx-auto px-4">
+        <h2 className="text-3xl font-bold mb-8 text-center">🚀 What is Nexora Suite?</h2>
+        <div className="space-y-6 text-xl text-gray-700 leading-relaxed text-center">
+          <p>Nexora Suite is an all-in-one business management platform designed for startups, MSMEs, and growing enterprises.</p>
+          <p>From accounting to sales, inventory, payroll, and customer support — Nexora brings all your essential business tools into one simple, unified dashboard.</p>
+          <p className="font-semibold text-blue-900">No complexity. No unnecessary features. Just software that works the way businesses actually operate.</p>
+        </div>
+      </section>
+
+      {/* Applications Grid */}
+      <section className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-16">What Our Clients Say</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((t, i) => (
-              <div key={i} className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
-                <p className="text-lg italic mb-8">“{t.text}”</p>
-                <div className="flex items-center gap-4">
-                  <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-blue-400/30 shrink-0">
-                    <Image 
-                      src={t.avatar} 
-                      alt={t.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div>
-                    <p className="font-bold text-blue-300">{t.name}</p>
-                    <p className="text-sm text-gray-400">{t.role}</p>
-                  </div>
+          <h2 className="text-3xl font-bold text-center mb-16 flex items-center justify-center gap-3">
+            <Package className="text-blue-600" /> Included Applications
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {apps.map((app) => (
+              <div key={app.name} className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex items-start gap-4">
+                <CheckCircle2 className="w-6 h-6 text-green-500 mt-1 shrink-0" />
+                <div>
+                  <h4 className="font-bold text-gray-900">{app.name}</h4>
+                  <p className="text-gray-600 text-sm">{app.desc}</p>
                 </div>
               </div>
             ))}
@@ -124,13 +89,55 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Contact Simple */}
-      <section className="py-20 text-center">
-        <h2 className="text-3xl font-bold mb-6">Stay In Touch</h2>
-        <p className="text-lg text-gray-600 mb-8">For consulting, business development, market research, or investment facilitation, contact us anytime.</p>
-        <div className="flex flex-col items-center gap-4 text-xl font-medium">
-          <a href="mailto:office@aidniglobal.in" className="flex items-center gap-2 text-blue-600 hover:underline"><Mail /> office@aidniglobal.in</a>
-          <a href="tel:+919099028291" className="flex items-center gap-2 text-blue-600 hover:underline"><Phone /> +91 90990 28291</a>
+      {/* Pricing Section */}
+      <section className="py-24 bg-white">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="bg-blue-900 rounded-3xl p-12 text-white text-center mb-16 overflow-hidden relative">
+            <div className="absolute top-0 right-0 p-4 bg-blue-500 text-xs font-bold uppercase tracking-widest rounded-bl-xl">Beta Phase</div>
+            <h2 className="text-3xl font-bold mb-6">🧪 Beta Access – 100% Free</h2>
+            <div className="grid sm:grid-cols-3 gap-6 mb-10">
+              <div className="p-4 bg-white/10 rounded-lg">Full access to all modules</div>
+              <div className="p-4 bg-white/10 rounded-lg">No credit card required</div>
+              <div className="p-4 bg-white/10 rounded-lg">Unlimited testing & feedback</div>
+            </div>
+            <p className="text-blue-200 mb-8 font-mono">Free until: 26 April 2026 | Official Launch: 27 April 2026</p>
+            <a href="https://gaathasuite.gaatha.tech" target="_blank" className="bg-white text-blue-900 px-8 py-3 rounded-full font-bold hover:bg-blue-50 transition-colors inline-block">
+              Start Using Nexora Beta Now
+            </a>
+          </div>
+
+          <div className="text-center mb-12">
+            <h3 className="text-2xl font-bold mb-2">💼 Post-Launch Pricing</h3>
+            <p className="text-gray-500 italic">Pricing subject to change at launch.</p>
+          </div>
+
+          <div className="overflow-hidden border border-gray-200 rounded-2xl shadow-sm">
+            <table className="w-full text-left border-collapse">
+              <thead className="bg-gray-50">
+                <tr>
+                  <th className="px-6 py-4 font-bold text-gray-900">Plan</th>
+                  <th className="px-6 py-4 font-bold text-gray-900">Price</th>
+                  <th className="px-6 py-4 font-bold text-gray-900">Includes</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200">
+                <tr><td className="px-6 py-4 font-medium">Free</td><td className="px-6 py-4 font-bold">€0</td><td className="px-6 py-4 text-gray-600 text-sm">Basic tools, limited users</td></tr>
+                <tr><td className="px-6 py-4 font-medium">Basic</td><td className="px-6 py-4 font-bold">€14 / mo</td><td className="px-6 py-4 text-gray-600 text-sm">Core business applications</td></tr>
+                <tr className="bg-blue-50/30"><td className="px-6 py-4 font-bold text-blue-600">Business</td><td className="px-6 py-4 font-bold text-blue-600">€29 / mo</td><td className="px-6 py-4 text-gray-600 text-sm">All apps, unlimited users</td></tr>
+                <tr><td className="px-6 py-4 font-medium">Enterprise</td><td className="px-6 py-4 font-bold">€59 / mo</td><td className="px-6 py-4 text-gray-600 text-sm">Advanced automation & priority support</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* Vision */}
+      <section className="py-24 bg-slate-900 text-white">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-8 flex items-center justify-center gap-3"><Zap className="text-yellow-400" /> Our Vision</h2>
+          <p className="text-xl text-blue-100 leading-relaxed mb-12">
+            At Aidni Global LLP, our vision is to build a complete SaaS ecosystem that empowers millions of businesses worldwide. Nexora Suite is our first major step toward democratizing business automation.
+          </p>
         </div>
       </section>
     </main>
