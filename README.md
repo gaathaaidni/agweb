@@ -1,1 +1,104 @@
-# Aidniglobalwebsite
+# Aidni Global Website
+
+This repository contains the codebase for the Aidni Global corporate website, built with Next.js and Tailwind CSS. The website showcases Aidni Global's strategic consulting services, cross-border business development, and its innovative SaaS product ecosystem (Gaatha Suite, Phoenix, GaathaAI).
+
+## Technologies Used
+
+-   **Next.js 14 (App Router)**: For a performant, SEO-friendly, and scalable React application.
+-   **React**: The core JavaScript library for building user interfaces.
+-   **Tailwind CSS**: A utility-first CSS framework for rapid and responsive UI development.
+-   **Lucide React**: A collection of beautiful and customizable open-source icons.
+-   **TypeScript**: For type safety and improved developer experience.
+
+## Features
+
+-   **Multi-page Structure**:
+    -   **Home Page**: Engaging hero section, overview of services, and a "How We Work" process.
+    -   **About Us Page**: Detailed company philosophy, core competencies, and client testimonials.
+    -   **Gaatha Suite Page**: Dedicated landing page for the Gaatha Suite product, detailing its applications and pricing.
+    -   **Phoenix Page**: Dedicated landing page for the Phoenix investment platform, outlining programs and country coverage.
+    -   **Contact Page**: Comprehensive contact information and a dynamic contact form.
+-   **Responsive Navigation**: A sticky header with a desktop menu and a responsive mobile menu for easy navigation across all devices.
+-   **Global Footer**: Professional footer with quick links, ecosystem links, and contact details.
+-   **Image Optimization**: Utilizes Next.js's `Image` component for optimized image loading, preventing layout shifts, and improving performance.
+-   **Contact Form**:
+    -   Client-side validation for required fields and email format.
+    -   Server-side API route (`/api/contact`) for handling submissions.
+    -   Basic in-memory rate limiting to prevent spam.
+    -   Success message state after successful submission.
+-   **SEO & Social Sharing**: Configured `next/head` metadata for better search engine visibility and Open Graph tags for rich social media previews.
+
+## Getting Started
+
+To run this project locally, follow these steps:
+
+1.  **Clone the repository:**
+    ```bash
+    git clone [repository-url]
+    cd Aidniglobalwebsite
+    ```
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
+3.  **Run the development server:**
+    ```bash
+    npm run dev
+    # or
+    yarn dev
+    ```
+
+    Open http://localhost:3000 with your browser to see the result.
+
+## Project Structure
+
+```
+Aidniglobalwebsite/
+├── public/
+│   ├── favicon.ico
+│   └── images/
+│       ├── about/
+│       │   └── team-photo.jpg
+│       ├── gaatha-suite/
+│       │   └── cropped-cropped-img-20250519-103858-748.webp
+│       ├── home/
+│       │   ├── about-section-img.jpg
+│       │   └── hero-bg.jpg
+│       ├── og-image.jpg
+│       └── testimonials/
+│           ├── female-3.jpg
+│           ├── male-1.jpg
+│           └── male-3.jpg
+├── src/
+│   ├── app/
+│   │   ├── about/
+│   │   │   └── page.tsx
+│   │   ├── api/
+│   │   │   └── contact/
+│   │   │       └── route.ts
+│   │   ├── contact/
+│   │   │   └── page.tsx
+│   │   ├── gaatha-suite/
+│   │   │   └── page.tsx
+│   │   ├── phoenix/
+│   │   │   └── page.tsx
+│   │   ├── globals.css
+│   │   └── layout.tsx
+│   ├── components/
+│   │   └── ... (future shared components)
+│   ├── Footer.tsx
+│   └── Navbar.tsx
+├── .gitignore
+├── next.config.mjs
+├── package.json
+├── README.md
+├── tailwind.config.js
+├── tsconfig.json
+└── webcontent.txt
+```
+
+---
+
+**Note**: For production deployments, consider replacing the in-memory rate limiter with a persistent store like Redis for more robust rate limiting across multiple server instances.
