@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -9,14 +10,16 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Home', href: '/' },
-    { name: 'About us', href: '/about' },
+    { name: 'About Us', href: '/about' },
     { name: 'Contact', href: '/contact' },
   ];
 
   const productLinks = [
     { name: 'Gaatha Suite', href: '/gaatha-suite', internal: true },
     { name: 'Phoenix', href: '/phoenix', internal: true },
-    { name: 'GaathaAI', href: 'https://gaatha.tech', internal: false },
+    { name: 'PostPilot', href: '/post-pilot', internal: true },
+    { name: 'Media Manager', href: '/media-manager', internal: true },
+    { name: 'GaathaAI', href: '/gaatha-ai', internal: true },
   ];
 
   return (

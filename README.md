@@ -25,7 +25,9 @@ This repository contains the codebase for the Aidni Global corporate website, bu
     -   Client-side validation for required fields and email format.
     -   Server-side API route (`/api/contact`) for handling submissions.
     -   Basic in-memory rate limiting to prevent spam.
+    -   **Email Integration**: Uses Resend for reliable email delivery of contact form submissions.
     -   Success message state after successful submission.
+    -   **Custom 404 Page**: A user-friendly error page for invalid URLs.
 -   **SEO & Social Sharing**: Configured `next/head` metadata for better search engine visibility and Open Graph tags for rich social media previews.
 
 ## Getting Started
@@ -52,12 +54,20 @@ To run this project locally, follow these steps:
 
     Open http://localhost:3000 with your browser to see the result.
 
+3.  **Configure Environment Variables**:
+    Create a `.env.local` file in the root of your project and add your Resend API key:
+    ```
+    RESEND_API_KEY=re_YOUR_RESEND_API_KEY
+    ```
 ## Project Structure
 
 ```
 Aidniglobalwebsite/
 ├── public/
 │   ├── favicon.ico
+│   ├── icon.png
+│   ├── apple-icon.png
+│   ├── manifest.json
 │   └── images/
 │       ├── about/
 │       │   └── team-photo.jpg

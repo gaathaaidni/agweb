@@ -19,7 +19,7 @@ const Footer = () => {
             <h3 className="text-lg font-bold mb-6 text-blue-400">Quick Links</h3>
             <ul className="space-y-4 text-slate-300">
               <li><Link href="/" className="hover:text-white transition-colors text-sm">Home</Link></li>
-              <li><Link href="/about" className="hover:text-white transition-colors text-sm">About us</Link></li>
+              <li><Link href="/about" className="hover:text-white transition-colors text-sm">About Us</Link></li>
               <li><Link href="/contact" className="hover:text-white transition-colors text-sm">Contact</Link></li>
             </ul>
           </div>
@@ -30,6 +30,8 @@ const Footer = () => {
             <ul className="space-y-4 text-slate-300">
               <li><Link href="/gaatha-suite" className="hover:text-white transition-colors text-sm">Gaatha Suite</Link></li>
               <li><Link href="/phoenix" className="hover:text-white transition-colors text-sm">Phoenix</Link></li>
+              <li><Link href="/post-pilot" className="hover:text-white transition-colors text-sm">PostPilot</Link></li>
+              <li><Link href="/media-manager" className="hover:text-white transition-colors text-sm">Media Manager</Link></li>
               <li><a href="https://gaatha.tech" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors text-sm">GaathaAI</a></li>
             </ul>
           </div>
