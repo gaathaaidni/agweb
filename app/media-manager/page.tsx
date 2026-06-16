@@ -1,0 +1,2 @@
+export const metadata = { title: 'Gaatha Media Manager' };
+export default function MediaManagerPage(){return <main className="section-container py-24"><p className="kicker">Gaatha Ecosystem</p><h1 className="mt-4 text-4xl font-black sm:text-6xl">Gaatha Media Manager</h1><p className="mt-6 max-w-3xl text-lg leading-8 text-slate-600">A media operations solution from the Gaatha ecosystem for organizing campaigns, assets, and execution workflows across growing teams.</p></main>}

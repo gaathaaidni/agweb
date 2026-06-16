@@ -1,0 +1,2 @@
+export const metadata = { title: 'PostPilot' };
+export default function PostPilotPage(){return <main className="section-container py-24"><p className="kicker">Gaatha Ecosystem</p><h1 className="mt-4 text-4xl font-black sm:text-6xl">PostPilot</h1><p className="mt-6 max-w-3xl text-lg leading-8 text-slate-600">PostPilot is part of the Aidni Global product ecosystem for smarter business communication and automated content workflows. Contact us for pilots, partnerships, and early access.</p></main>}
