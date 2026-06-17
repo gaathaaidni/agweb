@@ -23,7 +23,7 @@ const Footer = () => {
                   width={120}
                   height={120}
                   sizes="40px"
-                  className={`absolute left-0 h-8 md:h-10 w-auto object-contain transition-all duration-500 ease-in-out brightness-0 invert group-hover:opacity-80 ${isEcosystemPage ? 'opacity-0 scale-95 pointer-events-none' : 'opacity-100 scale-100'}`}
+                  className={`absolute left-0 h-9 md:h-11 w-auto object-contain transition-all duration-500 ease-in-out brightness-0 invert group-hover:opacity-80 ${isEcosystemPage ? 'opacity-0 scale-95 pointer-events-none' : 'opacity-100 scale-100'}`}
                   loading="lazy"
                 />
                 <Image

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, BarChart3, Globe2, Handshake, LineChart, Search, ShieldCheck, type LucideIcon } from 'lucide-react';
 
 const services: { title: string; text: string; Icon: LucideIcon }[] = [
@@ -15,15 +16,28 @@ export default function HomePage() {
     <main>
       <section className="relative overflow-hidden bg-gradient-to-br from-blue-950 via-blue-900 to-slate-950 text-white">
         <div className="absolute inset-0 opacity-20 [background-image:radial-gradient(circle_at_20%_20%,#60a5fa,transparent_30%),radial-gradient(circle_at_80%_10%,#22d3ee,transparent_25%)]" />
-        <div className="section-container relative py-24 lg:py-32">
-          <div className="max-w-4xl">
+        <div className="section-container relative py-24 lg:py-32 grid gap-12 lg:grid-cols-[1.4fr_0.6fr] lg:items-center">
+          <div>
             <p className="kicker text-blue-200">Innovation Driven. Globally Focused.</p>
-            <h1 className="mt-6 text-4xl font-black tracking-tight sm:text-6xl lg:text-7xl">Strategy, Technology, and Partnerships for Global Growth</h1>
+            <h1 className="mt-6 text-4xl font-black tracking-tight sm:text-5xl lg:text-6xl">Strategy, Technology, and Partnerships for Global Growth</h1>
             <p className="mt-6 max-w-3xl text-lg leading-8 text-blue-100">We support startups, SMEs, investors, and global partners through strategic consulting, cross-border business development, and innovative SaaS platforms under the Gaatha ecosystem.</p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <Link href="/contact" className="inline-flex items-center justify-center rounded-full bg-white px-7 py-3 font-bold text-blue-950 shadow-lg transition hover:-translate-y-0.5 hover:bg-blue-50">Contact Me <ArrowRight className="ml-2 h-5 w-5" /></Link>
               <Link href="/gaatha-suite" className="inline-flex items-center justify-center rounded-full border border-white/30 px-7 py-3 font-bold text-white transition hover:bg-white/10">Explore Gaatha Suite</Link>
             </div>
+          </div>
+          <div className="relative max-w-md mx-auto lg:max-w-none lg:ml-auto">
+            <div className="relative z-10 overflow-hidden rounded-[2.5rem] border-8 border-white/10 shadow-[0_20px_50px_rgba(96,165,250,0.3)]">
+              <Image 
+                src="/images/hero-bg.png" 
+                alt="Aidni Global Ecosystem" 
+                width={800} 
+                height={600} 
+                className="h-auto w-full object-cover transition-transform duration-700 hover:scale-105"
+                priority
+              />
+            </div>
+            <div className="absolute -bottom-6 -right-6 -z-0 h-64 w-64 rounded-full bg-blue-500/20 blur-3xl" />
           </div>
         </div>
       </section>

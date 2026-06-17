@@ -86,26 +86,25 @@ Aidniglobalwebsite/
 │           ├── female-3.jpg
 │           ├── male-1.jpg
 │           └── male-3.jpg
-├── src/
-│   ├── app/
-│   │   ├── about/
-│   │   │   └── page.tsx
-│   │   ├── api/
-│   │   │   └── contact/
-│   │   │       └── route.ts
-│   │   ├── contact/
-│   │   │   └── page.tsx
-│   │   ├── gaatha-suite/
-│   │   │   └── page.tsx
-│   │   ├── phoenix/
-│   │   │   └── page.tsx
-│   │   ├── globals.css
-│   │   └── layout.tsx
-│   └── components/
-│       ├── Footer.tsx
-│       ├── Navbar.tsx
-│       ├── OrganizationJsonLd.tsx
-│       └── ProductJsonLd.tsx
+├── app/
+│   ├── about/
+│   │   └── page.tsx
+│   ├── api/
+│   │   └── contact/
+│   │       └── route.ts
+│   ├── contact/
+│   │   └── page.tsx
+│   ├── gaatha-suite/
+│   │   └── page.tsx
+│   ├── phoenix/
+│   │   └── page.tsx
+│   ├── globals.css
+│   └── layout.tsx
+├── components/
+│   ├── Footer.tsx
+│   ├── Navbar.tsx
+│   ├── OrganizationJsonLd.tsx
+│   └── ProductJsonLd.tsx
 ├── .gitignore
 ├── next.config.mjs
 ├── package.json
