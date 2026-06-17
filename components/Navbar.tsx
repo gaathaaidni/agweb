@@ -21,7 +21,7 @@ const Navbar = () => {
   const productLinks = [
     { name: 'Gaatha Suite', href: '/gaatha-suite', internal: true },
     { name: 'Phoenix', href: '/phoenix', internal: true },
-    { name: 'GaathaAI', href: '/gaatha-ai', internal: true },
+    { name: 'GaathaAI', href: 'https://gaatha.tech', internal: false },
   ];
 
   return (
@@ -33,16 +33,18 @@ const Navbar = () => {
               <Image
                 src="/images/logos/aidni-logo.webp"
                 alt="Aidni Global"
-                width={150}
-                height={40}
+                width={120}
+                height={120}
+                sizes="(max-width: 768px) 32px, 40px"
                 className={`absolute left-0 h-8 md:h-10 w-auto object-contain transition-all duration-500 ease-in-out group-hover:opacity-80 ${isEcosystemPage ? 'opacity-0 scale-95 pointer-events-none' : 'opacity-100 scale-100'}`}
                 priority
               />
               <Image
                 src="/images/logos/gaatha-phoenix-logo.png"
                 alt="Gaatha & Phoenix Ecosystem"
-                width={56}
-                height={56}
+                width={120}
+                height={120}
+                sizes="(max-width: 768px) 48px, 56px"
                 className={`absolute left-0 h-12 md:h-14 w-auto object-contain transition-all duration-500 ease-in-out group-hover:opacity-80 ${isEcosystemPage ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}
                 priority
               />

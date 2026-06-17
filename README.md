@@ -4,7 +4,7 @@ This repository contains the codebase for the Aidni Global corporate website, bu
 
 ## Technologies Used
 
--   **Next.js 14 (App Router)**: For a performant, SEO-friendly, and scalable React application.
+-   **Next.js 15 (App Router)**: For a performant, SEO-friendly, and scalable React application.
 -   **React**: The core JavaScript library for building user interfaces.
 -   **Tailwind CSS**: A utility-first CSS framework for rapid and responsive UI development.
 -   **Lucide React**: A collection of beautiful and customizable open-source icons.
@@ -18,8 +18,8 @@ This repository contains the codebase for the Aidni Global corporate website, bu
     -   **Gaatha Suite Page**: Dedicated landing page for the Gaatha Suite product, detailing its applications and pricing.
     -   **Phoenix Page**: Dedicated landing page for the Phoenix investment platform, outlining programs and country coverage.
     -   **Contact Page**: Comprehensive contact information and a dynamic contact form.
--   **Responsive Navigation**: A sticky header with a desktop menu and a responsive mobile menu for easy navigation across all devices.
--   **Global Footer**: Professional footer with quick links, ecosystem links, and contact details.
+-   **Responsive Navigation**: A sticky header featuring context-aware branding and a mobile menu.
+-   **Context-Aware Branding**: Dynamic logo switching between Aidni Global and Gaatha Ecosystem based on the active route, featuring a smooth cross-fade transition.
 -   **Image Optimization**: Utilizes Next.js's `Image` component for optimized image loading, preventing layout shifts, and improving performance.
 -   **Contact Form**:
     -   Client-side validation for required fields and email format.
@@ -28,6 +28,8 @@ This repository contains the codebase for the Aidni Global corporate website, bu
     -   **Email Integration**: Uses Resend for reliable email delivery of contact form submissions.
     -   Success message state after successful submission.
     -   **Custom 404 Page**: A user-friendly error page for invalid URLs.
+-   **Structured Data**: Implementation of Schema.org JSON-LD for Organization and Products (Gaatha Suite, Phoenix) to enhance search engine visibility.
+-   **PWA Ready**: Web App Manifest (`manifest.json`) configured for better mobile integration and installation.
 -   **SEO & Social Sharing**: Configured `next/head` metadata for better search engine visibility and Open Graph tags for rich social media previews.
 
 ## Getting Started
@@ -99,10 +101,11 @@ Aidniglobalwebsite/
 │   │   │   └── page.tsx
 │   │   ├── globals.css
 │   │   └── layout.tsx
-│   ├── components/
-│   │   └── ... (future shared components)
-│   ├── Footer.tsx
-│   └── Navbar.tsx
+│   └── components/
+│       ├── Footer.tsx
+│       ├── Navbar.tsx
+│       ├── OrganizationJsonLd.tsx
+│       └── ProductJsonLd.tsx
 ├── .gitignore
 ├── next.config.mjs
 ├── package.json
