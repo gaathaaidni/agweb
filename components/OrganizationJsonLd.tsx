@@ -14,11 +14,13 @@ const OrganizationJsonLd = () => {
           "@type": "ContactPoint",
           "telephone": "+91-90990-28291",
           "contactType": "customer service",
-          "email": "office@aidniglobal.in",
+          "email": "gaatha.aidni@gmail.com",
           "areaServed": "Global"
         },
         "sameAs": [
-          "https://linkedin.com/company/aidniglobal"
+          "https://linkedin.com/company/aidniglobal",
+          "https://twitter.com/aidniglobal",
+          "https://instagram.com/aidniglobal"
         ]
       },
       {

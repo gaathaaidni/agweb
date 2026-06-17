@@ -79,8 +79,7 @@ const Footer = () => {
             <div className="flex items-start space-x-3 text-slate-300">
               <Mail className="w-5 h-5 mt-1 shrink-0 text-blue-500" />
               <div className="text-sm space-y-1">
-                <p>info@aidniglobal.in</p>
-                <p>office@aidniglobal.in</p>
+                <p>gaatha.aidni@gmail.com</p>
               </div>
             </div>
           </div>
