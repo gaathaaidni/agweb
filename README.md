@@ -77,6 +77,9 @@ Aidniglobalwebsite/
 │       │   ├── about-section-img.jpg
 │       │   └── hero-bg.jpg
 │       ├── og-image.jpg
+│       └── logos/
+│           ├── aidni-logo.webp
+│           └── gaatha-phoenix-logo.png
 │       └── testimonials/
 │           ├── female-3.jpg
 │           ├── male-1.jpg
