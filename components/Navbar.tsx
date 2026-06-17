@@ -1,13 +1,17 @@
-
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
+  // Dynamic Logo Logic
+  const isEcosystemPage = pathname.includes('gaatha') || pathname.includes('phoenix');
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'About Us', href: '/about' },
@@ -17,8 +21,6 @@ const Navbar = () => {
   const productLinks = [
     { name: 'Gaatha Suite', href: '/gaatha-suite', internal: true },
     { name: 'Phoenix', href: '/phoenix', internal: true },
-    { name: 'PostPilot', href: '/post-pilot', internal: true },
-    { name: 'Media Manager', href: '/media-manager', internal: true },
     { name: 'GaathaAI', href: '/gaatha-ai', internal: true },
   ];
 
@@ -27,8 +29,23 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
           <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="text-2xl font-bold text-blue-900">
-              AIDNI GLOBAL
+            <Link href="/" className="relative flex items-center group h-14 w-40">
+              <Image
+                src="/images/logos/aidni-logo.webp"
+                alt="Aidni Global"
+                width={150}
+                height={40}
+                className={`absolute left-0 h-8 md:h-10 w-auto object-contain transition-all duration-500 ease-in-out group-hover:opacity-80 ${isEcosystemPage ? 'opacity-0 scale-95 pointer-events-none' : 'opacity-100 scale-100'}`}
+                priority
+              />
+              <Image
+                src="/images/logos/gaatha-phoenix-logo.png"
+                alt="Gaatha & Phoenix Ecosystem"
+                width={56}
+                height={56}
+                className={`absolute left-0 h-12 md:h-14 w-auto object-contain transition-all duration-500 ease-in-out group-hover:opacity-80 ${isEcosystemPage ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}
+                priority
+              />
             </Link>
           </div>
           
