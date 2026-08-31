@@ -54,7 +54,7 @@ To run this project locally, follow these steps:
     yarn dev
     ```
 
-    Open http://localhost:3000 with your browser to see the result.
+    Open http://localhost:3001 with your browser to see the result.
 
 3.  **Configure Environment Variables**:
     Create a `.env.local` file in the root of your project and add your Resend API key:
