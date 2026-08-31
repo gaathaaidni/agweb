@@ -56,9 +56,11 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-bold mb-6 text-blue-400">Our Ecosystem</h3>
             <ul className="space-y-4 text-slate-300">
+              <li><Link href="/gaatha-ai" className="hover:text-white transition-colors text-sm">Gaatha AI</Link></li>
               <li><Link href="/gaatha-suite" className="hover:text-white transition-colors text-sm">Gaatha Suite</Link></li>
+              <li><Link href="/sentira-ai" className="hover:text-white transition-colors text-sm">Sentira AI</Link></li>
               <li><Link href="/phoenix" className="hover:text-white transition-colors text-sm">Phoenix</Link></li>
-              <li><a href="https://gaatha.tech" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors text-sm">GaathaAI</a></li>
+              <li><Link href="/csr" className="hover:text-white transition-colors text-sm">CSR</Link></li>
             </ul>
           </div>
 

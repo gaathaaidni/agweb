@@ -24,13 +24,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/gaatha-ai`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/gaatha-suite`,
       lastModified,
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/sentira-ai`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/phoenix`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/csr`,
       lastModified,
       changeFrequency: 'monthly',
       priority: 0.7,
@@ -43,12 +61,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/media-manager`,
-      lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/gaatha-ai`,
       lastModified,
       changeFrequency: 'monthly',
       priority: 0.7,

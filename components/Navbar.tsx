@@ -19,9 +19,11 @@ const Navbar = () => {
   ];
 
   const productLinks = [
+    { name: 'Gaatha AI', href: '/gaatha-ai', internal: true },
     { name: 'Gaatha Suite', href: '/gaatha-suite', internal: true },
+    { name: 'Sentira AI', href: '/sentira-ai', internal: true },
     { name: 'Phoenix', href: '/phoenix', internal: true },
-    { name: 'GaathaAI', href: 'https://gaatha.tech', internal: false },
+    { name: 'CSR', href: '/csr', internal: true },
   ];
 
   return (
